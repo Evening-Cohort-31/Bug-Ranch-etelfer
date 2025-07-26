@@ -76,23 +76,33 @@ Your journey will take you through the wildness of the American Midwest and acro
 ```
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+
+The drovers variable represents the array of objects that was formed when invoking the hireDrovers function using the argument of cattleToDrive. In this case because the amount of cattle to drive was 50 and the function hireDrovers essentially takes that number and divides it by five and then chooses five random objects from the database of drovers, the drovers variable is an array of five objects that are all taken from the list of drovers in the database.
+
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+
+Drover is each object within the array of objects and drovers represents the entire array of objects. It's basically saying, there is a group of drovers and within it each other drovers is individually called a drover.
+
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+. 
+   > (https://www.loom.com/share/5388c8bbddb044fdab679247d85bcf0c)
+   > 
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
       journey.push("forest")
    }
    ```
-   Explain this code with your best vocabulary.
-   > Your answer here
+   
+  This code is a for loop where you have the key of forests that was listed under the object areas. The for loop sets a variable for the amount of forests which is listed as forestNumber and lets it start at 0. Let instead of constant allows for the value of the variable to change which is crucial when doing a for loop where when it gains more data it may add to the amount of forests. It goes on to day that if the amount of forests is less than the forests that are currently listed as the key under the object of areas, then add to the amount. This will happen each time that the for loop runs. Each time this occurs, it will push the amount of forests into the journey array that was created under the journeyMaker function. 
+  
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   
+ The database variable is a collection of data that contains two main arrays, cattleTypes and drovers. These arrays contain curly brackets which each signify a seperate object that belongs to their respective array as well as keys for each object that are all followed by the value assigned to each key. The keys are the same for each object within the array, but the values differ, making them all their own objects with their own identities.
+ 
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   
+It is defining the parameter of the function of hireDrovers. When the function is invoked, herdSize will be the argument that is used to be able to get data that becomes the output of the function. In this case, when the function is invoked, the herdSize is 50, which we can get from the variable of cattleToHerd. By stating let herdSize = 0, it is not a constant and therefore can be changed based upon the varying amount of cattle that need to be herded by the drovers which makes the function more flexible and be able to be used in more that just one situation if needed.
 
 ## When You Are Done
 
